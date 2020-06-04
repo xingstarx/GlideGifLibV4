@@ -8,9 +8,7 @@ import android.widget.ImageView;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
 
-
 import cn.lhj.glidegif.GifSoftwareLayerSetter;
-import cn.lhj.glidegif.module.GlideApp;
 
 /**
  * File description.
@@ -44,7 +42,7 @@ public class ImageGifLoader {
 //                .apply(options)
 //                .load(uri)
 //                .into(targeView);
-        GlideApp.with(context)
+        Glide.with(context)
                 .as(FrameSequenceDrawable.class)
                 .listener(new GifSoftwareLayerSetter(loopCount))
                 .apply(options)
